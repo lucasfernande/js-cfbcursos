@@ -1,0 +1,33 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 10px;
+}
+
+input, button {
+    padding: 10px;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+}
+
+button {
+    background-color: rgb(56, 145, 56);
+    color: white;
+    border: 1px solid rgb(56, 145, 56);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkslategray;
+    border: 1px solid darkslategray;
+}
