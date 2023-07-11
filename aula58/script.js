@@ -21,10 +21,34 @@ class Pessoa {
     }
 }
 
-let p = new Pessoa('Paulo', 28) // passando os parâmetros para o constructor
+function limparCampos() {
+    nome.value = ''
+    nome.focus()
+    idade.value = ''
+}
 
-p.setNome('Pedro')
-p.setIdade(30)
+function mostrarRegistros() {
+    registros.innerHTML = ''
+    
+    pessoas.map(p => {
+        const div = document.createElement('div')
+        div.setAttribute('class', 'boxPessoa')
+        div.textContent = `Nome: ${p.nome} - Idade: ${p.idade}`
 
-console.log(p.getNome())
-console.log(p.getIdade())
+        registros.appendChild(div)
+    })
+}
+
+let pessoas = []
+let nome = document.querySelector('#nome')
+let idade = document.querySelector('#idade')
+let registros = document.querySelector('#registros')
+
+const btnCadastro = document.querySelector('#btnCadastro')
+btnCadastro.addEventListener('click', () => {
+    let p = new Pessoa(nome.value, idade.value)
+    pessoas.push(p)
+
+    limparCampos()
+    mostrarRegistros()
+})
