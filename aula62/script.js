@@ -1,22 +1,22 @@
-class Pessoa {
-    constructor(nome, idade) {
-        this.nome = nome
-        this.idade = idade
-    }
+/*  
+    nos objetos literais, os objetos da classe não são independentes, 
+    todos eles apontam para o mesmo endereço de memória 
+*/
 
-    getNome() {
+
+const Pessoa = {
+    nome: '',
+    idade: 0,
+    getNome: function() {
         return this.nome
-    }
-
-    getIdade() {
+    },
+    getIdade: function() {
         return this.idade
-    }
-
-    setNome(nome) {
+    },
+    setNome: function(nome) {
         this.nome = nome
-    }
-
-    setIdade(idade) {
+    },
+    setIdade: function(idade) {
         this.idade = idade
     }
 }
@@ -29,9 +29,9 @@ function limparCampos() {
 
 function mostrarRegistros() {
     registros.innerHTML = ''
-    
+
     pessoas.map(p => {
-        const div = document.createElement('div')
+        let div = document.createElement('div')
         div.setAttribute('class', 'boxPessoa')
         div.textContent = `Nome: ${p.getNome()} - Idade: ${p.getIdade()}`
 
@@ -46,9 +46,13 @@ let registros = document.querySelector('#registros')
 
 const btnCadastro = document.querySelector('#btnCadastro')
 btnCadastro.addEventListener('click', () => {
-    let p = new Pessoa(nome.value, idade.value)
-    pessoas.push(p)
+    let p = Pessoa
+    p.setNome(nome.value)
+    p.setIdade(idade.value)
+    p = {...p} // fazendo uma cópia do objeto literal
 
+    pessoas.push(p)
     limparCampos()
     mostrarRegistros()
 })
+
