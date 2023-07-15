@@ -59,10 +59,19 @@ function mostrarRegistros() {
     carros.map(c => {
         let div = document.createElement('div')
         if (c.constructor.name == 'Militar') {
-            div.innerHTML = `<p>Modelo: ${c.getModelo()} - Portas: ${c.getPortas()} - Blindagem: ${c.getBlindagem()} - Munição: ${c.getMunicao()}</p>`
+            div.innerHTML = `<span>Modelo: ${c.getModelo()} - Portas: ${c.getPortas()} - Blindagem: ${c.getBlindagem()} - Munição: ${c.getMunicao()}</span>`
         } else {
-            div.innerHTML = `<p>Modelo: ${c.getModelo()} - Portas: ${c.getPortas()}</p>`
+            div.innerHTML = `<span>Modelo: ${c.getModelo()} - Portas: ${c.getPortas()}</span>`
         }
+        let btnRemover = document.createElement('button')
+        btnRemover.setAttribute('class', 'btnRemover')
+        btnRemover.innerHTML = '<i class="fa-solid fa-trash-can"></i> Remover'
+        btnRemover.addEventListener('click', function() {
+            carros.splice(carros.indexOf(c), 1)
+            this.parentNode.remove()
+        })        
+
+        div.appendChild(btnRemover)
         res.appendChild(div)
     })
 }

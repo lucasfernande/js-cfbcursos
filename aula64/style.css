@@ -54,10 +54,30 @@ main {
 
 #res div {
     border-radius: 10px;
-    padding: 10px;
+    height: 50px;
+    padding-left: 10px;
     margin: 5px;
     background-color: rgb(38, 38, 75);
     color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#res div button {
+    height: 100%;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    padding: 0 10px;
+    background-color: rgb(184, 38, 38);
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#res div button:hover {
+    background-color: rgb(104, 21, 21);
 }
 
  
