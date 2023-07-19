@@ -17,22 +17,27 @@ body {
     width: 400px;
     margin: auto;
     padding: 10px;
+    background-color: #12130F;
     border-radius: 15px;
     border: 1px solid #ccc;
     align-self: center;
 }
 
 #display {
-    border: 1px solid #ccc;
+    border: 1px solid #5B9279;
     border-radius: 10px;
     text-align: end;
     padding: 10px;
+    color: white;
 }
 
 #teclas {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 10px;
+    border: 1px solid #5B9279;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .tec {
@@ -41,12 +46,13 @@ body {
     cursor: pointer;
     transition: .25s;
     font-size: 1.1em;
+    color: white;
 }
 
 .tec:nth-child(even), .tec:nth-child(4n - 1) {
-    border-left: 1px solid #ccc;
+    border-left: 1px solid #5B9279;
 }
 
 .tec:hover {
-    background-color: #ccc;
+    background-color: #5B9279;
 }
