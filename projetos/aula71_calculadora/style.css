@@ -17,17 +17,19 @@ body {
     width: 400px;
     margin: auto;
     padding: 10px;
-    background-color: #12130F;
+    background-color: #353631;
     border-radius: 15px;
-    border: 1px solid #ccc;
+    border: 2px solid #1c1d1b;
     align-self: center;
 }
 
 #display {
     border: 1px solid #5B9279;
     border-radius: 10px;
-    text-align: end;
-    padding: 10px;
+    text-align: right;
+    height: 50px;
+    line-height: 50px;
+    padding-right: 10px;
     color: white;
 }
 
@@ -40,6 +42,17 @@ body {
     overflow: hidden;
 }
 
+.limpar, .apagar {
+    grid-column: span 2;
+    border-bottom: 1px solid #5B9279;
+}
+
+.apagar span { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .tec {
     text-align: center;
     padding: 10px 0;
@@ -49,10 +62,17 @@ body {
     color: white;
 }
 
-.tec:nth-child(even), .tec:nth-child(4n - 1) {
-    border-left: 1px solid #5B9279;
-}
-
 .tec:hover {
     background-color: #5B9279;
+}
+
+.op {
+    background-color: #5B9279;
+    color: #353631;
+    font-weight: bold;
+}
+
+.op:hover {
+    background-color: #5b92799d;
+    color: #5B9279;
 }
