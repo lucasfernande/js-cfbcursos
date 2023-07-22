@@ -50,3 +50,8 @@ const apagar = document.querySelector('.apagar')
 apagar.addEventListener('click', () => {
     display.textContent = display.textContent.slice(0, -1)
 })
+
+const copy = document.querySelector('.copy')
+copy.addEventListener('click', () => {
+    navigator.clipboard.writeText(display.textContent)
+})

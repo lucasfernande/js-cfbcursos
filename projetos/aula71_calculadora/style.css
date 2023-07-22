@@ -42,8 +42,13 @@ body {
     overflow: hidden;
 }
 
-.limpar, .apagar {
+.copy {
     grid-column: span 2;
+    border-bottom: 1px solid #5B9279;
+}
+
+.limpar, .apagar {
+    grid-column: span 1;
     border-bottom: 1px solid #5B9279;
 }
 
