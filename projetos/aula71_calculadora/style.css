@@ -13,6 +13,14 @@ body {
     height: 100vh;
 }
 
+#container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: -400px;
+    transition: all .2s;
+}
+
 #calculadora {
     width: 400px;
     margin: auto;
@@ -80,4 +88,21 @@ body {
 .op:hover {
     background-color: #5b92799d;
     color: #5B9279;
+}
+
+#btnAbrir { 
+    align-self: center;
+    background-color: #5B9279;
+    padding: 20px 10px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+#btnAbrir span {
+    vertical-align: middle;
+    color: #1c1d1b;
+}
+
+.aberto {
+    left: 0 !important;
 }

@@ -55,3 +55,15 @@ const copy = document.querySelector('.copy')
 copy.addEventListener('click', () => {
     navigator.clipboard.writeText(display.textContent)
 })
+
+const container = document.querySelector('#container')
+const btnAbrir = document.querySelector('#btnAbrir')
+btnAbrir.addEventListener('click', () => {
+    container.classList.toggle('aberto')
+    
+    if (container.classList.contains('aberto')) {
+        btnAbrir.firstElementChild.textContent = 'arrow_back_ios'
+    } else {
+        btnAbrir.firstElementChild.textContent = 'arrow_forward_ios'
+    }
+})
