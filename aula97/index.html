@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/edba84fd66.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+    <main>
+        <section id="reg-form">
+            <form class="form">
+                <p class="text-field">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" required>
+                </p>
+
+                <p class="text-field">
+                    <label for="name">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </p>
+
+                <p class="text-field">
+                    <label for="name">Telefone</label>
+                    <input type="tel" name="phone" id="phone" required>
+                </p>
+                <input type="submit" id="btn-register" value="Cadastrar">
+            </form>
+        </section>
+
+        <section id="users">
+            <h1>Registros</h1>
+
+            <ul id="users-list"></ul>
+        </section>
+    </main>
+
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
