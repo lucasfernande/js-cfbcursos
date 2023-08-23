@@ -41,6 +41,7 @@ main {
     border: 1px solid #ccc;
     border-radius: 10px;
     font-size: 16px;
+    outline: none;
 }
 
 #btn-register {
@@ -59,10 +60,6 @@ main {
 #btn-register:hover {
     background-color: darkgray;
     color: #fff;
-}
-
-#text-field input:focus {
-    outline: none;
 }
 
 #users h1 {
