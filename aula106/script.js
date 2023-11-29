@@ -27,5 +27,7 @@ console.log(numeros.match(/10+/ig))
 console.log(numeros.match(/10*/ig))
 console.log(numeros.match(/10?/ig))
 
+// teste
+
 
 
